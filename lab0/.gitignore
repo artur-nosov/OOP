@@ -1,0 +1,17 @@
+# Папка збірки CMake
+build/
+
+# Скомпільовані файли
+*.exe
+*.out
+*.o
+*.obj
+
+# IDE файли
+.vscode/
+.idea/
+*.code-workspace
+
+# Системні файли
+.DS_Store
+Thumbs.db
