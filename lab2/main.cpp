@@ -1,22 +1,20 @@
 #include "triangle.h"
 
-// Виводить результат перевірки
 void printResult(const string &method, int result) {
     if (result == 1) {
-        cout << method << ": точка ВСЕРЕДИНІ трикутника" << endl;
+        cout << method << ": точка ВСЕРЕДИНІ трикутника\n";
     } else if (result == 0) {
-        cout << method << ": точка НА МЕЖІ трикутника" << endl;
+        cout << method << ": точка НА МЕЖІ трикутника\n";
     } else {
-        cout << method << ": точка ЗОВНІ трикутника" << endl;
+        cout << method << ": точка ЗОВНІ трикутника\n";
     }
 }
 
 int main() {
-    system("chcp 65001>nul 2>nul");
+    system("chcp 65001 > nul 2>&1");
 
-    // Введення координат трикутника
     Triangle t;
-    cout << "Введіть координати вершин трикутника:" << endl;
+    cout << "Введіть координати вершин трикутника:\n";
 
     cout << "A (x y): ";
     cin >> t.A.x >> t.A.y;
@@ -27,21 +25,16 @@ int main() {
     cout << "C (x y): ";
     cin >> t.C.x >> t.C.y;
 
-    // Перевірка на виродженість
     if (t.isDegenerate()) {
-        cout << "Трикутник вироджений (площа = 0). Завершення." << endl;
-        return 0;
+        cout << "Трикутник вироджений (площа = 0).\n";
     }
 
-    cout << "Площа трикутника: " << t.area() << endl;
-    cout << endl;
+    cout << "Площа трикутника: " << t.area() << "\n\n";
 
-    // Введення кількості точок
     int n;
     cout << "Скільки точок перевірити? ";
     cin >> n;
 
-    // Перевірка кожної точки
     for (int i = 0; i < n; i++) {
         Point p;
         cout << "\nТочка " << (i + 1) << " (x y): ";
