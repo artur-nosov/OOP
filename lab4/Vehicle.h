@@ -34,7 +34,7 @@ public:
 protected:
     int ShowVehicle()
     {
-        std::cout << "Mae " << wheels << " koles ta " << engine << " dvyhun.\nSyhnalyt " << sound << " holosom: ";
+        std::cout << "Має " << wheels << " коліс та " << engine << " двигун.\nСигналить " << sound << " голосом: ";
         return 1;
     };
 };
@@ -45,15 +45,15 @@ public:
     Car()
     {
         int e = SetWheels(4);
-        e = SetEngine("benzynovyj");
-        e = SetSound("huchnym");
+        e = SetEngine("бензиновий");
+        e = SetSound("гучним");
         e = ShowVehicle();
         e = Honk();
     };
 
     int Honk()
     {
-        std::cout << "Bip-bip! Biiip!";
+        std::cout << "Біп-біп! Біііп!";
         return 1;
     };
 };
@@ -64,15 +64,15 @@ public:
     Motorcycle()
     {
         int e = SetWheels(2);
-        e = SetEngine("benzynovyj");
-        e = SetSound("hromkim");
+        e = SetEngine("бензиновий");
+        e = SetSound("гучним");
         e = ShowVehicle();
         e = Honk();
     };
 
     int Honk()
     {
-        std::cout << "Vrum-vrum! Brrr!";
+        std::cout << "Врум-врум! Бррр!";
         return 1;
     };
 };
@@ -92,7 +92,7 @@ public:
     SportsCar(std::string car_brand)
     {
         int e = SetBrand(car_brand);
-        std::cout << "\nMarka avto: " << brand;
+        std::cout << "\nМарка авто: " << brand;
     }
 
     SportsCar() {}
@@ -121,6 +121,6 @@ public:
         int e = SetBrand(car_brand);
         e = SetModel(car_model);
         e = SetBattery(bat);
-        std::cout << "\nTse elektro " << brand << " " << model << ". Batareya: " << battery << " kWh. Vidklykayetsya na: " << model;
+        std::cout << "\nЦе електро " << brand << " " << model << ". Батарея: " << battery << " кВт·год. Відгукується на: " << model;
     }
 };
